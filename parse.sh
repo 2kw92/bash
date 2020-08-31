@@ -13,10 +13,10 @@ then
     time_start=`date -d'now' +[%d/%b/%Y:%H:%M:%S`
     time_last_start=`date -d"$(cat "/tmp/last_start.txt")" "+[%d/%b/%Y:%H:%M:%S"`
 
-    echo "time_begin"
+    echo "time_end"
     echo $time_start
 
-    echo "time_end"
+    echo "time_begin"
     echo $time_last_start
     echo ""
 
