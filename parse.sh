@@ -7,7 +7,7 @@ LOCKFILE="/tmp/lockfile"
 
 if ( set -o noclobber; echo "$$" > "$LOCKFILE") 2> /dev/null;
 then
-    trap 'rm -f "$lockfile"; exit $?' INT TERM EXIT
+    trap 'rm -f "$LOCKFILE"; exit $?' INT TERM EXIT
     exec 1>$REPORTFILE
 
     time_start=`date -d'now' +[%d/%b/%Y:%H:%M:%S`
